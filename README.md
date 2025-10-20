@@ -1,5 +1,6 @@
 
-🏠 Airbnb Clone Project
+🏠 Airbnb Clone Project  
+
 🏆 Project Goals
 
 User Management: Implement a secure system for user registration, authentication, and profile management.
@@ -60,6 +61,7 @@ Indexing: Improves performance for frequently accessed data.
 Caching: Uses Redis for reduced database load and faster response.
 
 ⚙️ Technology Stack
+
 Category	Technologies
 Backend Framework	Django
 API Development	Django REST Framework, GraphQL
@@ -68,6 +70,7 @@ Asynchronous Tasks	Celery
 Caching & Session Management	Redis
 Containerization	Docker
 Automation	CI/CD Pipelines
+
 🚀 Key Highlights
 
 Fully functional backend supporting user, booking, and payment management.
