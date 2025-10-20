@@ -209,25 +209,59 @@ Relationships:
 
 1. User Management
 
-This feature enables users to register, authenticate, and manage their profiles securely. It supports role-based access control, ensuring hosts and guests have the right permissions. Passwords are encrypted, and authentication tokens are used for secure session handling.
+  This feature enables users to register, authenticate, and manage their profiles securely. It supports role-based access control, ensuring hosts and guests have the right permissions. Passwords are encrypted, and authentication tokens are used for secure session handling.
 
 2. Property Management
 
-Hosts can create, update, and delete property listings, including details such as title, description, price, and location. This feature ensures properties are displayed dynamically, allowing users to explore available accommodations easily.
+  Hosts can create, update, and delete property listings, including details such as title, description, price, and location. This feature ensures properties are displayed dynamically, allowing users to explore available accommodations easily.
 
 3. Booking System
 
-The booking module allows users to reserve properties and manage their booking details such as check-in and check-out dates. It handles availability checks and ensures that overlapping bookings are prevented.
+  The booking module allows users to reserve properties and manage their booking details such as check-in and check-out dates. It handles availability checks and ensures that overlapping bookings are prevented.
 
 4. Payment Processing
 
-This feature integrates a secure payment gateway for handling transactions related to property bookings. It manages transaction states (pending, completed, failed) and records detailed payment information for accountability.
+  This feature integrates a secure payment gateway for handling transactions related to property bookings. It manages transaction states (pending, completed, failed) and records detailed payment information for accountability.
 
 5. Review System
 
-Users can submit reviews and ratings for properties they’ve stayed in, providing valuable feedback to hosts and insights for other users. Reviews help maintain trust and improve property quality on the platform.
+  Users can submit reviews and ratings for properties they’ve stayed in, providing valuable feedback to hosts and insights for other users. Reviews help maintain trust and improve property quality on the platform.
 
 6. Data Optimization
 
-Database indexing and caching strategies (via Redis) are used to improve query performance and reduce server load. This ensures the system remains fast, scalable, and responsive even as data volume increases.
+  Database indexing and caching strategies (via Redis) are used to improve query performance and reduce server load. This ensures the system remains fast, scalable, and responsive even as data volume increases.
 
+
+🔒 API Security
+
+  Ensuring robust API security is essential to protect sensitive user information, maintain data integrity, and prevent unauthorized access to system resources. The following security measures are implemented across the backend services:
+
+1. Authentication
+
+  All endpoints are protected using JWT (JSON Web Tokens) to verify user identity before granting access. This ensures that only registered and authenticated users can interact with protected routes.
+  ➡️ Why it matters: Prevents unauthorized access to user data, bookings, and property details.
+
+2. Authorization
+
+  Role-based access control (RBAC) ensures that users have permissions only for actions they are allowed to perform. For instance, only hosts can manage property listings, and only admins can perform administrative tasks.
+  ➡️ Why it matters: Protects against privilege escalation and ensures clear separation of user roles.
+
+3. Rate Limiting
+
+  Rate limiting is applied to restrict the number of API requests a user can make within a set time frame. This helps prevent abuse such as brute-force login attempts or denial-of-service attacks.
+  ➡️ Why it matters: Preserves API performance and protects against malicious traffic spikes.
+
+4. Data Encryption
+
+  Sensitive information such as passwords and payment details is encrypted both in transit (via HTTPS) and at rest. This ensures data cannot be intercepted or tampered with.
+  ➡️ Why it matters: Protects user credentials, payment data, and personal information from potential breaches.
+
+5. Input Validation & Sanitization
+
+  All incoming data is validated and sanitized to prevent injection attacks such as SQL Injection or XSS.
+  ➡️ Why it matters: Maintains data integrity and prevents attackers from exploiting backend vulnerabilities.
+
+6. Secure Payment Processing
+
+  Payment transactions are handled through secure, verified gateways that comply with industry standards (e.g., PCI-DSS).
+  ➡️ Why it matters: Ensures that financial information remains confidential and trustworthy.
