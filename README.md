@@ -1,292 +1,222 @@
-**🏠 Airbnb Clone Project  **
+🏠 Airbnb Clone Project
+🏆 Project Goals
 
-**🏆 Project Goals**
+User Management: Secure system for registration, authentication, and profile management.
 
-User Management: Implement a secure system for user registration, authentication, and profile management.
-  
-  Property Management: Develop features for creating, updating, and retrieving property listings.
-  
-  Booking System: Enable users to reserve properties and manage booking details.
-  
-  Payment Processing: Integrate a payment system to handle transactions securely.
-  
-  Review System: Allow users to post reviews and ratings for properties.
-  
-  Data Optimization: Ensure fast and efficient data access with optimized queries and caching.
+Property Management: Create, update, and retrieve property listings.
 
-**🛠️ Features Overview**
-  1. API Documentation
-  
-      OpenAPI Standard: APIs documented for clarity and easy integration.
-      
-      Django REST Framework: Provides a comprehensive RESTful API for CRUD operations.
-      
-      GraphQL: Offers flexible and efficient data queries.
-  
-  2. User Authentication
-      
-      Endpoints: /users/, /users/{user_id}/
-      
-      Features: Register, authenticate, and manage user profiles.
-  
-  3. Property Management
-  
-      Endpoints: /properties/, /properties/{property_id}/
-      
-      Features: Create, update, retrieve, and delete property listings.
-      
-  4. Booking System
-  
-      Endpoints: /bookings/, /bookings/{booking_id}/
-      
-      Features: Manage bookings, check-in/check-out details.
-  
-  5. Payment Processing
-  
-      Endpoints: /payments/
-      
-      Features: Handle secure payment transactions for bookings.
-    
-  6. Review System
-  
-      Endpoints: /reviews/, /reviews/{review_id}/
-      
-      Features: Post and manage reviews for properties.
-  
-  7. Database Optimization
-  
-      Indexing: Improves performance for frequently accessed data.
-      
-      Caching: Uses Redis for reduced database load and faster response.
+Booking System: Reserve properties and manage booking details.
 
-**⚙️ Technology Stack**
+Payment Processing: Handle transactions securely.
 
-  Category	Technologies
-  Backend Framework	Django
-  API Development	Django REST Framework, GraphQL
-  Database	PostgreSQL
-  Asynchronous Tasks	Celery
-  Caching & Session Management	Redis
-  Containerization	Docker
-  Automation	CI/CD Pipelines
+Review System: Allow users to post reviews and ratings.
 
-**🚀 Key Highlights**
+Data Optimization: Ensure fast and efficient data access through optimized queries and caching.
 
-  Fully functional backend supporting user, booking, and payment management.
-  
-  REST + GraphQL APIs for flexible frontend integration.
-  
-  Optimized for performance and scalability using caching and async tasks.
+🛠️ Features Overview
+1. API Documentation
 
-**📬 Future Enhancements**
+OpenAPI Standard: APIs documented for clarity and integration.
 
-  Add property image uploads via AWS S3 or Cloudinary.
-  
-  Implement push notifications for booking updates.
-  
-  Expand admin dashboard for analytics and reports.
+Django REST Framework: Provides RESTful API for CRUD operations.
 
-**👥 Team Roles**
+GraphQL: Flexible and efficient data querying.
 
+2. User Authentication
+
+Endpoints: /users/, /users/{user_id}/
+
+Features: Register, authenticate, and manage user profiles.
+
+3. Property Management
+
+Endpoints: /properties/, /properties/{property_id}/
+
+Features: Create, update, retrieve, and delete property listings.
+
+4. Booking System
+
+Endpoints: /bookings/, /bookings/{booking_id}/
+
+Features: Manage bookings, including check-in and check-out.
+
+5. Payment Processing
+
+Endpoints: /payments/
+
+Features: Handle secure payment transactions.
+
+6. Review System
+
+Endpoints: /reviews/, /reviews/{review_id}/
+
+Features: Post and manage property reviews.
+
+7. Database Optimization
+
+Indexing: Speeds up queries for frequently accessed data.
+
+Caching: Uses Redis to reduce database load and improve performance.
+
+⚙️ Technology Stack
+Category	Technologies
+Backend Framework	Django
+API Development	Django REST Framework, GraphQL
+Database	PostgreSQL
+Asynchronous Tasks	Celery
+Caching & Session Management	Redis
+Containerization	Docker
+Automation	CI/CD Pipelines
+🚀 Key Highlights
+
+Fully functional backend supporting users, bookings, and payments.
+
+REST + GraphQL APIs for flexible frontend integration.
+
+Optimized for performance and scalability using caching and async tasks.
+
+📬 Future Enhancements
+
+Add property image uploads via AWS S3 or Cloudinary.
+
+Implement push notifications for booking updates.
+
+Expand admin dashboard for analytics and reports.
+
+👥 Team Roles
 Role	Responsibilities
+👨‍💻 Backend Developer	Implements API endpoints, database schemas, and business logic.
+🗄️ Database Administrator	Designs and manages database structure, indexing, and optimizations.
+⚙️ DevOps Engineer	Oversees deployment, monitoring, and scaling of backend services.
+🧪 QA Engineer	Tests and validates backend functionalities to ensure reliability and quality.
+🧩 Database Design
+Users
 
-  👨‍💻 Backend Developer	Implements API endpoints, database schemas, and business logic.
-  
-  🗄️ Database Administrator	Designs and manages database structure, indexing, and optimizations.
-  
-  ⚙️ DevOps Engineer	Oversees deployment, monitoring, and scaling of backend services.
-  
-  🧪 QA Engineer	Tests and validates backend functionalities to ensure reliability and quality.
-
-
-**🧩 Database Design**
-
-The project’s database is designed for scalability and efficient data access, following relational principles. Below are the key entities, their main fields, and relationships:
-
-1. Users
-
-Key Fields:
-
-  id — Unique identifier for each user.
-  
-  name — Full name of the user.
-  
-  email — User’s email address (unique).
-  
-  password_hash — Securely stored user password.
-  
-  role — Defines user type (guest, host, or admin).
-
+Key Fields: id, name, email, password_hash, role
 Relationships:
 
-  A user can list multiple properties.
-  
-  A user can make multiple bookings.
-  
-  A user can leave multiple reviews.
+A user can list multiple properties.
 
-2. Properties
+A user can make multiple bookings.
 
-Key Fields:
+A user can leave multiple reviews.
 
-  id — Unique property identifier.
-  
-  title — Property name or title.
-  
-  description — Detailed property description.
-  
-  price_per_night — Cost of booking per night.
-  
-  location — Property location details.
+Properties
 
+Key Fields: id, title, description, price_per_night, location
 Relationships:
 
-  A property belongs to one user (the host).
-  
-  A property can have many bookings.
-  
-  A property can have many reviews.
+Belongs to one user (host).
 
-3. Bookings
+Can have multiple bookings and reviews.
 
-Key Fields:
+Bookings
 
-  id — Unique booking identifier.
-  
-  user_id — References the user who made the booking.
-  
-  property_id — References the booked property.
-  
-  check_in_date — Booking start date.
-  
-  check_out_date — Booking end date.
-
+Key Fields: id, user_id, property_id, check_in_date, check_out_date
 Relationships:
 
-  A booking belongs to one user and one property.
-  
-  A booking can have one payment.
+Belongs to one user and one property.
 
-4. Payments
+Can have one payment.
 
-Key Fields:
+Payments
 
-  id — Unique payment identifier.
-  
-  booking_id — References the related booking.
-  
-  amount — Payment amount.
-  
-  status — Indicates payment state (pending, completed, failed).
-  
-  transaction_date — Date and time of the transaction.
-
+Key Fields: id, booking_id, amount, status, transaction_date
 Relationships:
 
-  A payment belongs to one booking.
+Belongs to one booking.
 
-5. Reviews
+Reviews
 
-Key Fields:
-
-  id — Unique review identifier.
-  
-  user_id — References the user who wrote the review.
-  
-  property_id — References the reviewed property.
-  
-  rating — Numerical score for the property.
-  
-  comment — User’s feedback message.
-
+Key Fields: id, user_id, property_id, rating, comment
 Relationships:
 
-  A review belongs to one user and one property.
-  
-  A property can have many reviews from different users.
+Belongs to one user and one property.
 
-**✨ Feature Breakdown**
+A property can have multiple reviews.
 
-1. User Management
+✨ Feature Breakdown
+User Management
 
-  This feature enables users to register, authenticate, and manage their profiles securely. It supports role-based access control, ensuring hosts and guests have the right permissions. Passwords are encrypted, and authentication tokens are used for secure session handling.
+Secure registration, authentication, and profile management. Supports role-based access control and encrypted passwords.
 
-2. Property Management
+Property Management
 
-  Hosts can create, update, and delete property listings, including details such as title, description, price, and location. This feature ensures properties are displayed dynamically, allowing users to explore available accommodations easily.
+Hosts can create, update, and delete listings. Properties are displayed dynamically for easy exploration.
 
-3. Booking System
+Booking System
 
-  The booking module allows users to reserve properties and manage their booking details such as check-in and check-out dates. It handles availability checks and ensures that overlapping bookings are prevented.
+Reserve properties with check-in and check-out management. Prevents overlapping bookings.
 
-4. Payment Processing
+Payment Processing
 
-  This feature integrates a secure payment gateway for handling transactions related to property bookings. It manages transaction states (pending, completed, failed) and records detailed payment information for accountability.
+Integrates secure payment gateways. Tracks transaction states and records payment details.
 
-5. Review System
+Review System
 
-  Users can submit reviews and ratings for properties they’ve stayed in, providing valuable feedback to hosts and insights for other users. Reviews help maintain trust and improve property quality on the platform.
+Users can leave ratings and feedback. Maintains trust and improves property quality.
 
-6. Data Optimization
+Data Optimization
 
-  Database indexing and caching strategies (via Redis) are used to improve query performance and reduce server load. This ensures the system remains fast, scalable, and responsive even as data volume increases.
-
+Database indexing and Redis caching improve performance and reduce server load.
 
 🔒 API Security
+Authentication
 
-  Ensuring robust API security is essential to protect sensitive user information, maintain data integrity, and prevent unauthorized access to system resources. The following security measures are implemented across the backend services:
+Uses JWT for secure user sessions. Prevents unauthorized access to data.
 
-1. Authentication
+Authorization
 
-  All endpoints are protected using JWT (JSON Web Tokens) to verify user identity before granting access. This ensures that only registered and authenticated users can interact with protected routes.
-  ➡️ Why it matters: Prevents unauthorized access to user data, bookings, and property details.
+Role-based access control ensures users only access permitted actions.
 
-2. Authorization
+Rate Limiting
 
-  Role-based access control (RBAC) ensures that users have permissions only for actions they are allowed to perform. For instance, only hosts can manage property listings, and only admins can perform administrative tasks.
-  ➡️ Why it matters: Protects against privilege escalation and ensures clear separation of user roles.
+Prevents abuse like brute-force attacks or DoS attempts.
 
-3. Rate Limiting
+Data Encryption
 
-  Rate limiting is applied to restrict the number of API requests a user can make within a set time frame. This helps prevent abuse such as brute-force login attempts or denial-of-service attacks.
-  ➡️ Why it matters: Preserves API performance and protects against malicious traffic spikes.
+Sensitive data encrypted in transit (HTTPS) and at rest.
 
-4. Data Encryption
+Input Validation & Sanitization
 
-  Sensitive information such as passwords and payment details is encrypted both in transit (via HTTPS) and at rest. This ensures data cannot be intercepted or tampered with.
-  ➡️ Why it matters: Protects user credentials, payment data, and personal information from potential breaches.
+Prevents SQL Injection and XSS attacks.
 
-5. Input Validation & Sanitization
+Secure Payment Processing
 
-  All incoming data is validated and sanitized to prevent injection attacks such as SQL Injection or XSS.
-  ➡️ Why it matters: Maintains data integrity and prevents attackers from exploiting backend vulnerabilities.
+Complies with PCI-DSS standards to protect financial information.
 
-6. Secure Payment Processing
+⚙️ CI/CD Pipeline
 
-  Payment transactions are handled through secure, verified gateways that comply with industry standards (e.g., PCI-DSS).
-  ➡️ Why it matters: Ensures that financial information remains confidential and trustworthy.
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines automate building, testing, and deployment of the project.
 
+Why it matters:
 
-**  ⚙️ CI/CD Pipeline**
+Ensures consistency and reduces manual errors.
 
-Continuous Integration (CI) and Continuous Deployment (CD) pipelines automate the software development lifecycle — from code integration and testing to deployment. CI/CD ensures that every code change is automatically built, tested, and deployed, improving reliability and reducing manual effort.
+Speeds up release cycles with automatic deployments.
 
-Why CI/CD is Important
+Detects bugs early via automated tests.
 
-Consistency: Automates repetitive tasks to ensure consistent builds and deployments.
+Encourages collaboration through frequent commits and integration.
 
-Faster Delivery: Reduces release time by automatically deploying updates after successful testing.
+Tools Used:
 
-Early Bug Detection: Continuous testing helps identify and fix issues early in development.
+GitHub Actions: Automates builds, tests, and deployments.
 
-Improved Collaboration: Encourages frequent commits and integration from multiple developers without conflicts.
+Docker: Ensures consistent environments.
 
-Tools Used
+Celery & Redis: Handles background tasks in CI/CD.
 
-GitHub Actions: Automates testing, building, and deployment workflows directly from the repository.
+PostgreSQL: Used in testing and deployment for consistency.
 
-Docker: Containerizes the application for consistent environments across development, testing, and production.
+This version:
 
-Celery & Redis: Used for background task management and asynchronous operations within the pipeline.
+Uses proper Markdown headers (#, ##, ###) for all sections.
 
-PostgreSQL: Integrated into testing and deployment environments for data consistency checks.
+Removes unnecessary bold ** around headers.
+
+Separates sections clearly for readability.
+
+Keeps tables for team roles and tech stack.
+
+Adds spacing for visual clarity.
