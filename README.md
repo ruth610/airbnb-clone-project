@@ -90,7 +90,12 @@ Expand admin dashboard for analytics and reports.
 👥 Team Roles
 
 Role	Responsibilities
+
 👨‍💻 Backend Developer	Implements API endpoints, database schemas, and business logic.
+
 🗄️ Database Administrator	Designs and manages database structure, indexing, and optimizations.
+
 ⚙️ DevOps Engineer	Oversees deployment, monitoring, and scaling of backend services.
+
 🧪 QA Engineer	Tests and validates backend functionalities to ensure reliability and quality.
+
