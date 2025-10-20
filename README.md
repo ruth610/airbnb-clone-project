@@ -1,19 +1,18 @@
-
 🏠 Airbnb Clone Project  
 
 🏆 Project Goals
 
 User Management: Implement a secure system for user registration, authentication, and profile management.
-
-Property Management: Develop features for creating, updating, and retrieving property listings.
-
-Booking System: Enable users to reserve properties and manage booking details.
-
-Payment Processing: Integrate a payment system to handle transactions securely.
-
-Review System: Allow users to post reviews and ratings for properties.
-
-Data Optimization: Ensure fast and efficient data access with optimized queries and caching.
+  
+  Property Management: Develop features for creating, updating, and retrieving property listings.
+  
+  Booking System: Enable users to reserve properties and manage booking details.
+  
+  Payment Processing: Integrate a payment system to handle transactions securely.
+  
+  Review System: Allow users to post reviews and ratings for properties.
+  
+  Data Optimization: Ensure fast and efficient data access with optimized queries and caching.
 
 🛠️ Features Overview
   1. API Documentation
