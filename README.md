@@ -265,3 +265,28 @@ Relationships:
 
   Payment transactions are handled through secure, verified gateways that comply with industry standards (e.g., PCI-DSS).
   ➡️ Why it matters: Ensures that financial information remains confidential and trustworthy.
+
+
+**  ⚙️ CI/CD Pipeline**
+
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines automate the software development lifecycle — from code integration and testing to deployment. CI/CD ensures that every code change is automatically built, tested, and deployed, improving reliability and reducing manual effort.
+
+Why CI/CD is Important
+
+Consistency: Automates repetitive tasks to ensure consistent builds and deployments.
+
+Faster Delivery: Reduces release time by automatically deploying updates after successful testing.
+
+Early Bug Detection: Continuous testing helps identify and fix issues early in development.
+
+Improved Collaboration: Encourages frequent commits and integration from multiple developers without conflicts.
+
+Tools Used
+
+GitHub Actions: Automates testing, building, and deployment workflows directly from the repository.
+
+Docker: Containerizes the application for consistent environments across development, testing, and production.
+
+Celery & Redis: Used for background task management and asynchronous operations within the pipeline.
+
+PostgreSQL: Integrated into testing and deployment environments for data consistency checks.
