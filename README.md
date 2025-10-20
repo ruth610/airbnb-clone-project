@@ -71,7 +71,7 @@
 
 ---
 
-## 👥 Team Roles
+## Team Roles
 
 | Role | Responsibilities |
 |------|-----------------|
