@@ -1,6 +1,6 @@
-🏠 Airbnb Clone Project  
+**🏠 Airbnb Clone Project  **
 
-🏆 Project Goals
+**🏆 Project Goals**
 
 User Management: Implement a secure system for user registration, authentication, and profile management.
   
@@ -14,7 +14,7 @@ User Management: Implement a secure system for user registration, authentication
   
   Data Optimization: Ensure fast and efficient data access with optimized queries and caching.
 
-🛠️ Features Overview
+**🛠️ Features Overview**
   1. API Documentation
   
       OpenAPI Standard: APIs documented for clarity and easy integration.
@@ -59,7 +59,7 @@ User Management: Implement a secure system for user registration, authentication
       
       Caching: Uses Redis for reduced database load and faster response.
 
-⚙️ Technology Stack
+**⚙️ Technology Stack**
 
   Category	Technologies
   Backend Framework	Django
@@ -70,7 +70,7 @@ User Management: Implement a secure system for user registration, authentication
   Containerization	Docker
   Automation	CI/CD Pipelines
 
-🚀 Key Highlights
+**🚀 Key Highlights**
 
   Fully functional backend supporting user, booking, and payment management.
   
@@ -78,7 +78,7 @@ User Management: Implement a secure system for user registration, authentication
   
   Optimized for performance and scalability using caching and async tasks.
 
-📬 Future Enhancements
+**📬 Future Enhancements**
 
   Add property image uploads via AWS S3 or Cloudinary.
   
@@ -86,7 +86,7 @@ User Management: Implement a secure system for user registration, authentication
   
   Expand admin dashboard for analytics and reports.
 
-👥 Team Roles
+**👥 Team Roles**
 
 Role	Responsibilities
 
@@ -99,7 +99,7 @@ Role	Responsibilities
   🧪 QA Engineer	Tests and validates backend functionalities to ensure reliability and quality.
 
 
-🧩 Database Design
+**🧩 Database Design**
 
 The project’s database is designed for scalability and efficient data access, following relational principles. Below are the key entities, their main fields, and relationships:
 
@@ -204,4 +204,30 @@ Relationships:
   A review belongs to one user and one property.
   
   A property can have many reviews from different users.
+
+**✨ Feature Breakdown**
+
+1. User Management
+
+This feature enables users to register, authenticate, and manage their profiles securely. It supports role-based access control, ensuring hosts and guests have the right permissions. Passwords are encrypted, and authentication tokens are used for secure session handling.
+
+2. Property Management
+
+Hosts can create, update, and delete property listings, including details such as title, description, price, and location. This feature ensures properties are displayed dynamically, allowing users to explore available accommodations easily.
+
+3. Booking System
+
+The booking module allows users to reserve properties and manage their booking details such as check-in and check-out dates. It handles availability checks and ensures that overlapping bookings are prevented.
+
+4. Payment Processing
+
+This feature integrates a secure payment gateway for handling transactions related to property bookings. It manages transaction states (pending, completed, failed) and records detailed payment information for accountability.
+
+5. Review System
+
+Users can submit reviews and ratings for properties they’ve stayed in, providing valuable feedback to hosts and insights for other users. Reviews help maintain trust and improve property quality on the platform.
+
+6. Data Optimization
+
+Database indexing and caching strategies (via Redis) are used to improve query performance and reduce server load. This ensures the system remains fast, scalable, and responsive even as data volume increases.
 
