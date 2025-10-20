@@ -55,6 +55,7 @@
 | Containerization | Docker |
 | Automation | CI/CD Pipelines |
 
+
 ---
 
 ## 🚀 Key Highlights
@@ -115,7 +116,6 @@
 - **Data Optimization:** Database indexing and Redis caching improve performance and reduce server load.  
 
 ---
-
 ## 🔒 API Security
 - **Authentication:** JWT for secure user sessions.  
 - **Authorization:** Role-based access control.  
